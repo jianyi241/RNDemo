@@ -20,6 +20,7 @@ import { RootStackParamList } from '../navigation/AppNavigator';
 import { getFontFamily } from '../utils/fonts';
 import ComputedExample from '../components/ComputedExample';
 import BoxShadowExamle from '../components/BoxShadowExamle';
+import { BUNDLE_VERSION } from '@env';
 interface UserInfo {
   id: string;
   userName: string;
@@ -110,6 +111,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           <Text style={styles.welcomeText}>欢迎回来，{userInfo?.userName || '用户'}</Text>
           <Text style={styles.welcomeSubText}>您已成功登录系统</Text>
           <Text style={styles.welcomeSubText}>{Platform.OS}{Platform.Version}</Text>
+          <Text style={styles.welcomeSubText}>版本: {BUNDLE_VERSION}</Text>
         </View>
 
         <View style={styles.cardContainer}>

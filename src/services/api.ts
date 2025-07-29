@@ -33,7 +33,7 @@ const saveToken = async (token: string): Promise<void> => {
 
 // 创建axios实例
 const api = axios.create({
-  baseURL: 'https://api.chao982233.top',
+  baseURL: process.env.API_BASE_URL,
   timeout: 10000
 });
 

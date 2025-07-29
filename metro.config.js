@@ -8,6 +8,8 @@ const config = {
   transformer: {
     getTransformOptions: async () => ({
       transform: {
+        sourceExts: ['jsx', 'js', 'ts', 'tsx', 'json', 'cjs'],
+        getSourceMap: true,
         experimentalImportSupport: false,
         inlineRequires: true,
         nonInlinedRequires: [
@@ -21,7 +23,6 @@ const config = {
   },
   server: {
     port: 8081,
-    host: '0.0.0.0', // 允许所有网络接口
     enhanceMiddleware: (middleware) => {
       return (req, res, next) => {
         // 解决跨域问题

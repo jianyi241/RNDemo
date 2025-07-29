@@ -15,6 +15,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { login } from '../services/api';
 import RSAEncryption from '../utils/RSAEncryption';
 import { RootStackParamList } from '../navigation/AppNavigator';
+import { BUNDLE_VERSION } from '@env';
 
 type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
@@ -60,7 +61,8 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
           source={{uri: 'https://www.gstatic.com/marketing-cms/assets/images/55/d4/947f89ad43cc8af8d1049d176907/chromium.webp=s96-fcrop64=1,00000000ffffffff-rw'}}
           style={styles.logo}
         />
-        <Text style={styles.appTitle}>RN Demo</Text>
+        <Text style={styles.appTitle}>RN Demo </Text>
+        <Text>版本: {BUNDLE_VERSION}</Text>
       </View>
       
       <View style={styles.formContainer}>
