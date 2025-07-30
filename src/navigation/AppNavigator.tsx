@@ -25,6 +25,7 @@ import GestureTest from '../screens/GestureTest'
 import BlackLineMonitor from '../screens/BlackLineMonitor'
 import ImageUploadExample from '../screens/ImageUploadExample'
 import PlatformDifferences from '../screens/PlatformDifferences'
+import PhotoListScreen from '../screens/PhotoListScreen'
 import { forceTouchGestureHandlerProps } from 'react-native-gesture-handler/lib/typescript/handlers/ForceTouchGestureHandler';
 
 
@@ -52,6 +53,7 @@ export type RootStackParamList = {
   BlackLineMonitor: undefined;
   ImageUploadExample: undefined;
   PlatformDifferences: undefined;
+  PhotoList: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -303,6 +305,14 @@ const AppNavigator = () => {
         options={{ 
           title: '平台差异',
           headerShown: true 
+        }} 
+      />
+      <Stack.Screen
+        name="PhotoList" 
+        component={PhotoListScreen} 
+        options={{ 
+          title: 'Unsplash 照片',
+          headerShown: false // 使用自定义头部
         }} 
       />
       </Stack.Navigator>

@@ -341,6 +341,16 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
               >
                 <Text style={styles.navButtonText}>平台差异对比</Text>
               </TouchableOpacity>
+              <TouchableOpacity 
+                style={[styles.navButton, { backgroundColor: '#2196F3' }]}
+                onPress={() => {
+                  console.log('点击了 PhotoList 按钮');
+                  Alert.alert('提示', '正在跳转到 Unsplash 照片列表页面');
+                  navigation.navigate('PhotoList');
+                }}
+              >
+                <Text style={styles.navButtonText}>Unsplash 照片列表</Text>
+              </TouchableOpacity>
             </View>
           </View> 
 
